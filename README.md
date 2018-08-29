@@ -59,7 +59,7 @@ $ make
 
 3. ctest  
 Run all the tests.  
-This project uses `CPPUTest`.  
+This project uses `CppUTest`.  
 if the detail info is needed, use `-V` option.  
 ```
 $ ctest
