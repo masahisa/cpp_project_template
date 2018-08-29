@@ -37,9 +37,10 @@ cpp_project_template/
 ## Build
 
 1. cmake  
-Move to the `build` direcotry and cmake the top level `CMakeLists.txt`.  
+Make and move to the `build` directory and cmake the top level `CMakeLists.txt`.  
 If `Release` or `Debug` option is needed, use the `-DCMAKE_BUILD_TYPE`.  
 ```
+$ mkdir build
 $ cd build
 $ cmake ..
 or
