@@ -3,8 +3,12 @@ cmake_minimum_required(VERSION 2.8)
 # project name
 project(cpp_project_template)
 
-# default make option
-set(CMAKE_CXX_FLAGS "-Wall -O3 -std=c++14")
+# cmake option
+set(CMAKE_CXX_FLAGS "-Wall -std=c++14")
+set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -coverage")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
+set(CMAKE_CXX_FLAGS_MINSIZEREL "-Os -DNDEBUG")
+set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O2 -g -DNDEBUG")
 
 # output directories
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ../../lib)
