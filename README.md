@@ -11,6 +11,9 @@ cpp_project_template/
     CMakeLists.txt
     bin/
     build/
+    cov/
+        CMakeLists.txt
+        lcov/
     doc/
         CMakeLists.txt
         Doxyfile.in
@@ -33,6 +36,8 @@ cpp_project_template/
 
 `bin`: the output directory of executables  
 `build`: the building directory  
+`cov`: the coverage directory  
+`cov/lcov`: the output directory of lcov  
 `doc`: the document directory  
 `doc/doxygen`: the output directory of doxygen  
 `include`: header files of the project  
@@ -41,7 +46,7 @@ cpp_project_template/
 `test`: source files for all the tests
 
 ## Dependencies
-This project depends on `cmake`, `cpputest`, `doxygen` and `graphviz`.
+This project depends on `cmake`, `cpputest`, `doxygen`, `graphviz` and `lcov`.
 
 ## Build
 
@@ -79,6 +84,12 @@ $ ctest -V
 Make documents by doxygen.  
 ```
 $ make doc
+```
+
+5. make cov  
+Make coverage report by lcov.  
+```
+$ make cov
 ```
 
 ## License
