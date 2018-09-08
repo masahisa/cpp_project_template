@@ -11,6 +11,10 @@ cpp_project_template/
     CMakeLists.txt
     bin/
     build/
+    doc/
+        CMakeLists.txt
+        Doxyfile.in
+        doxygen/
     include/
         manipulator.h
         numeric.h
@@ -29,10 +33,15 @@ cpp_project_template/
 
 `bin`: the output directory of executables  
 `build`: the building directory  
+`doc`: the document directory  
+`doc/doxygen`: the output directory of doxygen  
 `include`: header files of the project  
 `lib`: the output directory of shared libraries and archives  
 `src`: source files of the project  
 `test`: source files for all the tests
+
+## Dependencies
+This project depends on `cmake`, `cpputest`, `doxygen` and `graphviz`.
 
 ## Build
 
@@ -59,13 +68,18 @@ $ make
 
 3. ctest  
 Run all the tests.  
-This project uses `CppUTest`.  
-if the detail info is needed, use `-V` option.  
+If the detail info is needed, use `-V` option.  
 ```
 $ ctest
 or
 $ ctest -V
 ```
 
-# License
+4. make doc  
+Make documents by doxygen.  
+```
+$ make doc
+```
+
+## License
 MIT License
