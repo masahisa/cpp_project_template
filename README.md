@@ -65,7 +65,7 @@ $ cmake -DCMAKE_BUILD_TYPE=Debug ..
 
 2. make  
 make the targets.  
-`libnumeric.a` and `libmanipulator.so` are output to `lib` directory.  
+The sample `libnumeric.a` and `libmanipulator.so` are output to `lib` directory.  
 Executables `cpp_project_template` and `run_all_tests` are to `bin`.
 ```
 $ make
@@ -82,12 +82,15 @@ $ ctest -V
 
 4. make doc  
 Make documents by doxygen.  
+You can read the document `doc/doxygen/html/index.html` with browser.  
 ```
 $ make doc
 ```
 
 5. make cov  
-Make coverage report by lcov.  
+Make the test coverage report by lcov after running ctest.  
+You can check the coverage report `cov/lcov/index.html` with browser.  
+The coverage report is made when using cmake `-DCMAKE_BUILD_TYPE=Debug` option.  
 ```
 $ make cov
 ```
