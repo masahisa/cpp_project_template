@@ -17,9 +17,9 @@ TEST_GROUP(numeric)
 TEST(numeric, sum_test)
 {
     CHECK_EQUAL(5, n.sum());
-};
+}
 
 TEST(numeric, diff_test)
 {
     CHECK_EQUAL(-1, n.diff());
-};
+}
